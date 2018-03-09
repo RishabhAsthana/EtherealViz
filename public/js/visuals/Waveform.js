@@ -23,7 +23,7 @@ for(let count = 0; count < 256; count += 1){
 }
 
 // Create several loops using the same geometry
-let sc = 0.01;
+let sc = 0.21;
 for(let index = 0; index < 160; index += 1){
     
     // Create material for all the loops

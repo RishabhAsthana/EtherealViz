@@ -277,7 +277,7 @@ function releaseSliderHooks(){
  * @param: input : user search input
  */
 function populateList(input){
-    axios.get('http://10.0.0.162:8888/get_access_token').then(function(response){
+    axios.get('https://spot-server-197501.appspot.com/get_access_token').then(function(response){
         let spotify_endpoint = 'https://api.spotify.com/v1/search?q=' + input + '&type=track&access_token=';
         let access_token = (response.data);
         let encodedURI = window.encodeURI(spotify_endpoint + access_token);
@@ -296,6 +296,9 @@ function populateList(input){
                 a.onclick = getMicInput();
                 track_list_element.appendChild(a);
             }
+        })
+        .catch(function(err){
+            console.log("Spotify request failed")
         });
     });
 }

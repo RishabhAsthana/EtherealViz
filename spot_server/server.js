@@ -8,12 +8,13 @@ var cors = require('cors')
 app.use(cors())
 
 // Use environment defined port or 4000
-var port = 8888;
+var port = process.env.PORT || 8888;
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
-var clientId = '164ca2c4464f43dd8d202fa9b96c8cef',
-clientSecret = 'ae268048f9b64e77842441c9d2171cf5';
+// Spotify credentials
+var clientId = 'Your client id',
+clientSecret = 'Your client secret';
 
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({

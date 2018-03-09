@@ -94,7 +94,7 @@ function onWindowResize(){
 // Every 10 seconds, the visual is allowed to switch
 window.setInterval(function(){
     switch_visual = true;
-}, 10000)
+}, 1000000)
 
 /*
  * Returns a random integer between the given range

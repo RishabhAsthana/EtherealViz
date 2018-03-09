@@ -151,7 +151,10 @@ function playSound(audioBuffer, offset) {
  */
 function getMicInput() {
 
-    stopSound();
+    document.getElementById("micIcon").innerHTML = 'mic_off';
+
+    if(source_started)
+        stopSound();
 
     //x-browser
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -249,6 +252,9 @@ function playSongAtIndex(current_index){
  * Plays the selected song from playlist
  */
 function playPlaylistSong(song_title){
+
+    document.getElementById("playIcon").innerHTML = 'pause';
+
     current_index = song_index_map[song_title];
     playSongAtIndex(current_index);       
 }
