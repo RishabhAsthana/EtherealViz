@@ -66,7 +66,7 @@ function initAudio(){
     freqByteData = new Uint8Array(analyser.frequencyBinCount);
     timeByteData = new Uint8Array(analyser.frequencyBinCount);
 
-    loadSound("Audio/Test.mp3");
+    loadSound("public/Audio/Test.mp3");
     document.getElementById("headingId").innerHTML = 'Six Shooter';
 
 }

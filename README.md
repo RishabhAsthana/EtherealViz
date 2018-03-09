@@ -1,12 +1,13 @@
 # EtherealViz
-EtherealViz generates audio reactive visuals off the songs supplied bu the user
+EtherealViz generates audio reactive visuals off the songs supplied by the user or microphone input. Spotify API used for song search.
 
 # Startup
-EtherealViz runs on node. To start the application, navigate to 'ethereal/EtherealViz' directory using bash/terminal/cmd and type  
+EtherealViz is a static webpage. For local testing, to start the application, navigate to 'ethereal/EtherealViz' directory using bash/terminal/cmd and type  
 ```
-npm start
+pythom -m SimpleHTTPSercver 8080
 ```
-This will serve application on localhost:8080
+Or a comparable server (Node works as well). The server is required to overcome the CORS policy as Filesystem access is not allowed on most popular browsers.
+This will serve application on localhost:8080 (Visit this on your browser)
 
 # Testing
 EtherealViz uses Mocha/Chai running in browser as testing suite. To run test cases, navigate to 'ethereal/EtherealViz/test' using bash/terminal/cmd and type  
