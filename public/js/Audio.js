@@ -81,8 +81,8 @@ function loadSound(path){
     request.open("GET", path , true);
     request.responseType = "arraybuffer";
     request.onload = function() {
-    songs['Six Shooter'] = request.response.slice();
-    song_index_map['Six Shooter'] = 0;
+    songs['Acid Rain'] = request.response.slice();
+    song_index_map['Acid Rain'] = 0;
     document.getElementById("test_song").onclick = (e) => {playPlaylistSong(e.srcElement.text)};
     decodeAudioBuffer(request.response, 0);
     };
